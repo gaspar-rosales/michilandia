@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MichiLandia 🐾 | El rincón definitivo de los amantes de los gatos</title>
+  <meta name="description" content="Descubre curiosidades, adopta michis adorables, genera ronroneos relajantes y únete a la comunidad felina más cariñosa.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐾</text></svg>">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Fredoka"', 'cursive', 'sans-serif'],
+          },
+          colors: {
+            amber: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              300: '#fcd34d',
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            },
+            coral: {
+              50: '#fff5f2',
+              100: '#ffe8e1',
+              200: '#ffd4c7',
+              400: '#ff8a65',
+              500: '#ff6f43',
+              600: '#e65324',
+            },
+            cream: '#FAF7F2',
+          },
+          animation: {
+            'float-slow': 'float 5s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 2s infinite',
+            'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'wiggle': 'wiggle 1s ease-in-out infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-12px) rotate(2deg)' },
+            },
+            wiggle: {
+              '0%, 100%': { transform: 'rotate(-4deg)' },
+              '50%': { transform: 'rotate(4deg)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom styles & decorative elements */
+    .bg-pattern {
+      background-image: radial-gradient(#fbbf24 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .text-glow {
+      text-shadow: 0 4px 24px rgba(245, 158, 11, 0.25);
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 8px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #fdf6ec;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #fcd34d;
+      border-radius: 9999px;
+    }
+    /* Heart bounce animation */
+    @keyframes heartBurst {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.35) rotate(-8deg); }
+      100% { transform: scale(1); }
+    }
+    .heart-active {
+      animation: heartBurst 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAF7F2] text-slate-800 font-sans antialiased selection:bg-amber-200 selection:text-amber-900 overflow-x-hidden">
+
+  <!-- ==================== BANNER SUPERIOR ==================== -->
+  <div class="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm relative z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+      <span class="inline-block animate-wiggle">🐟</span>
+      <span>¡Campaña de Adopción de Primavera activa! <strong>Más de 35 michis</strong> buscan un hogar amoroso.</span>
+      <a href="#adopta" class="underline font-bold hover:text-amber-100 ml-1 transition">Ver disponibles &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-amber-100/70 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-400 to-orange-400 flex items-center justify-center text-white text-2xl shadow-md shadow-amber-200 group-hover:scale-105 group-hover:rotate-6 transition-all">
+          🐾
+        </div>
+        <div>
+          <span class="font-display font-bold text-2xl tracking-tight text-slate-900 group-hover:text-amber-600 transition">Michi<span class="text-amber-500">Landia</span></span>
+          <span class="block text-[10px] uppercase font-bold tracking-widest text-amber-600/80 -mt-1">El club felino</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+        <a href="#curiosidades" class="hover:text-amber-600 transition flex items-center gap-1.5">
+          <span>Curiosidades</span>
+        </a>
+        <a href="#ronroneos" class="hover:text-amber-600 transition flex items-center gap-1.5">
+          <span class="text-amber-500">🎧</span>
+          <span>Ronron-Terapia</span>
+        </a>
+        <a href="#adopta" class="hover:text-amber-600 transition flex items-center gap-1.5">
+          <span>Michis del Mes</span>
+        </a>
+        <a href="#traductor" class="hover:text-amber-600 transition flex items-center gap-1.5">
+          <span>Michi-Traductor</span>
+        </a>
+        <a href="#comunidad" class="hover:text-amber-600 transition">
+          <span>Comunidad</span>
+        </a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <!-- Purr Audio Fast Trigger Button -->
+        <button id="btn-quick-purr" title="Activar sonido de ronroneo relajante" class="flex items-center gap-2 px-3 py-2 text-xs font-bold rounded-xl bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition shadow-sm active:scale-95">
+          <span id="quick-purr-icon">🔊</span>
+          <span id="quick-purr-label">Ronroneo: OFF</span>
+        </button>
+
+        <a href="#adopta" class="px-5 py-2.5 rounded-xl font-bold text-sm bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md shadow-orange-300/40 hover:shadow-lg hover:shadow-orange-400/50 hover:from-amber-600 hover:to-orange-600 transition active:scale-95 flex items-center gap-2">
+          <span>Adoptar Michi</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Abrir menú" class="md:hidden p-2 rounded-xl text-slate-700 hover:bg-amber-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 border-t border-amber-100 bg-white/95 backdrop-blur-lg">
+      <div class="flex flex-col gap-3 font-semibold text-slate-700 pt-2">
+        <a href="#curiosidades" class="mobile-link py-2 px-3 rounded-lg hover:bg-amber-50">Curiosidades y Datos</a>
+        <a href="#ronroneos" class="mobile-link py-2 px-3 rounded-lg hover:bg-amber-50">🎧 Ronron-Terapia</a>
+        <a href="#adopta" class="mobile-link py-2 px-3 rounded-lg hover:bg-amber-50">Michis del Mes (Adopción)</a>
+        <a href="#traductor" class="mobile-link py-2 px-3 rounded-lg hover:bg-amber-50">Michi-Traductor Humano</a>
+        <a href="#comunidad" class="mobile-link py-2 px-3 rounded-lg hover:bg-amber-50">Comunidad</a>
+        <div class="pt-3 flex flex-col gap-2">
+          <button id="mobile-purr-btn" class="w-full py-2.5 rounded-xl bg-amber-100 text-amber-800 text-sm font-bold flex items-center justify-center gap-2">
+            <span>🔊 Reproducir Ronroneo</span>
+          </button>
+          <a href="#adopta" class="mobile-link text-center w-full py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm shadow">
+            Adoptar Michi 🐾
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-pattern">
+    <!-- Floating background decorative blobs -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 -z-10 w-[700px] h-[400px] bg-gradient-to-tr from-amber-200/40 via-orange-100/30 to-pink-100/40 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100/80 border border-amber-200/80 text-amber-900 text-xs sm:text-sm font-bold shadow-sm">
+            <span class="flex h-2 w-2 rounded-full bg-amber-500 animate-ping"></span>
+            <span>El hogar digital de los michis más felices del planeta</span>
+          </div>
+
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-slate-900 tracking-tight leading-[1.12]">
+            Donde cada <span class="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">ronroneo</span> cura el alma y alegra tu vida.
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+            Bienvenido a <strong>MichiLandia</strong>: la comunidad creada por y para admiradores de bigotes, patitas suaves y siestas de 18 horas. Escucha ronroneos antiestrés, conoce gatitos listos para adopción y aprende sus mayores secretos.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#adopta" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 text-white font-bold text-base shadow-xl shadow-orange-300/40 hover:shadow-orange-400/60 hover:-translate-y-0.5 transition duration-200 flex items-center justify-center gap-3">
+              <span>Conoce a los michis</span>
+              <span class="text-xl">🐱</span>
+            </a>
+
+            <button id="hero-sound-btn" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white border-2 border-amber-200 text-slate-800 font-bold text-base shadow-sm hover:border-amber-400 hover:bg-amber-50/60 hover:-translate-y-0.5 transition duration-200 flex items-center justify-center gap-2.5">
+              <span class="text-xl">🎵</span>
+              <span id="hero-sound-label">Probar Ronron-Terapia</span>
+            </button>
+          </div>
+
+          <!-- Social Proof & Stats -->
+          <div class="pt-6 border-t border-amber-200/60 grid grid-cols-3 gap-4 text-center lg:text-left max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-slate-900">4,800+</div>
+              <div class="text-xs text-slate-500 font-medium">Gatos adoptados</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-amber-600">99.8%</div>
+              <div class="text-xs text-slate-500 font-medium">Nivel de ternura</div>
+            </div>
+            <div>
+              <div class="font-display font-bold text-2xl sm:text-3xl text-slate-900">50k+</div>
+              <div class="text-xs text-slate-500 font-medium">Cat Lovers activos</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual / Floating Cat Card Stack -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          
+          <div class="relative w-full max-w-[380px] sm:max-w-[420px]">
+            
+            <!-- Main Cat Image Card -->
+            <div class="relative rounded-3xl overflow-hidden bg-white p-3 shadow-2xl shadow-amber-900/10 border-4 border-white rotate-1 hover:rotate-0 transition-transform duration-500">
+              <div class="relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-amber-100">
+                <img 
+                  id="hero-cat-img"
+                  src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=800&q=80" 
+                  alt="Gatito tierno con ojos verdes" 
+                  class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                  loading="eager"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                
+                <div class="absolute bottom-4 left-4 right-4 text-white flex justify-between items-end">
+                  <div>
+                    <span class="inline-block px-2.5 py-1 rounded-full bg-amber-500/90 text-[11px] font-bold tracking-wide uppercase">Michi Destacado</span>
+                    <h3 class="text-xl font-display font-bold mt-1">Oliver el Curioso</h3>
+                    <p class="text-xs text-slate-200">Experto en saltar dentro de cajas</p>
+                  </div>
+                  <button id="hero-like-btn" class="w-11 h-11 rounded-full bg-white/20 backdrop-blur-md border border-white/40 flex items-center justify-center hover:bg-white hover:text-red-500 text-white transition active:scale-90" title="Dar amor">
+                    <span class="text-xl">❤️</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1: Siesta -->
+            <div class="absolute -top-4 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-lg border border-amber-100 flex items-center gap-3 animate-float-slow">
+              <div class="w-9 h-9 rounded-xl bg-amber-100 flex items-center justify-center text-xl">
+                😴
+              </div>
+              <div>
+                <p class="text-[10px] uppercase font-bold text-slate-400">Estado actual</p>
+                <p class="text-xs font-bold text-slate-800">Siesta de 4 horas</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2: Purr Frequency -->
+            <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-xl border border-amber-100 flex items-center gap-3 animate-float-delayed">
+              <div class="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center text-xl">
+                ✨
+              </div>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                  <p class="text-xs font-bold text-slate-800">Frecuencia Purr</p>
+                </div>
+                <p class="text-[11px] text-slate-500">25 - 150 Hz (Sanadora)</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE TOOL 1: RONRON-TERAPIA ==================== -->
+  <section id="ronroneos" class="py-16 md:py-24 bg-white border-y border-amber-100/80 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-amber-600 font-bold text-xs uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+          Terapia Científica Anti-Estrés
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-3">
+          Estación de Ronron-Terapia 🎧
+        </h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">
+          Diversos estudios confirman que la frecuencia del ronroneo de un gato reduce la ansiedad, calma los nervios y estimula la relajación. ¡Prueba nuestro sintetizador en tiempo real!
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100/60 rounded-3xl p-6 sm:p-10 border border-amber-200 shadow-xl max-w-3xl mx-auto">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+          
+          <!-- Visual Soundwave Graphic -->
+          <div class="flex items-center gap-4">
+            <div id="purr-avatar" class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-400 to-orange-500 flex items-center justify-center text-4xl shadow-md transition-all">
+              😺
+            </div>
+            <div>
+              <h3 class="font-display font-bold text-xl text-slate-900">Sintetizador Felino</h3>
+              <p id="purr-status" class="text-xs text-slate-500 font-medium">Presiona reproducir para iniciar la vibración</p>
+              <!-- Animated audio bars -->
+              <div id="purr-bars" class="flex items-end gap-1 h-5 mt-2 opacity-30 transition-opacity">
+                <span class="w-1.5 bg-amber-500 rounded-full h-2"></span>
+                <span class="w-1.5 bg-amber-600 rounded-full h-4"></span>
+                <span class="w-1.5 bg-orange-500 rounded-full h-3"></span>
+                <span class="w-1.5 bg-amber-500 rounded-full h-5"></span>
+                <span class="w-1.5 bg-amber-600 rounded-full h-2"></span>
+                <span class="w-1.5 bg-orange-400 rounded-full h-4"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <button id="toggle-purr-btn" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md transition-all active:scale-95 flex items-center justify-center gap-2">
+              <span id="main-purr-icon">▶️</span>
+              <span id="main-purr-btn-text">Iniciar Ronroneo</span>
+            </button>
+
+            <button id="meow-btn" class="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-white border border-amber-300 hover:bg-amber-100/70 text-amber-900 font-bold text-sm transition-all active:scale-95 flex items-center justify-center gap-2">
+              <span>🐾</span>
+              <span>¡Miau!</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Volume and frequency selector -->
+        <div class="mt-8 pt-6 border-t border-amber-200/80 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="purr-volume" class="block text-xs font-bold text-slate-700 mb-1">Volumen del ronroneo</label>
+            <input type="range" id="purr-volume" min="0" max="1" step="0.05" value="0.7" class="w-full accent-amber-500 cursor-pointer">
+          </div>
+          <div>
+            <label for="purr-tone" class="block text-xs font-bold text-slate-700 mb-1">Tipo de gato</label>
+            <select id="purr-tone" class="w-full text-xs font-medium bg-white border border-amber-300 rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-400">
+              <option value="warm">Michi doméstico gordito (Calmado y grave)</option>
+              <option value="kitten">Gatito bebé (Ligero y suave)</option>
+              <option value="intense">Motor turbo de avión (Vibración profunda)</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== CURIOSIDADES Y DATOS ==================== -->
+  <section id="curiosidades" class="py-16 md:py-24 bg-[#FAF7F2]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Static Facts Grid -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-amber-600 font-bold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full">
+            ¿Sabías que...?
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+            Secretos fascinantes de los felinos
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Los gatos han acompañado a la humanidad durante más de 9,500 años. Son atletas prodigiosos, maestros del camuflaje y expertos en conquistarnos con una sola mirada.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            
+            <div class="p-5 rounded-2xl bg-white border border-amber-100 shadow-sm hover:shadow-md transition">
+              <div class="text-2xl mb-2">👂</div>
+              <h4 class="font-bold text-slate-800 text-sm">32 Músculos por oreja</h4>
+              <p class="text-xs text-slate-500 mt-1">Pueden girar cada oreja 180 grados de forma independiente para localizar el sonido de una lata abriéndose a 2 km.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-amber-100 shadow-sm hover:shadow-md transition">
+              <div class="text-2xl mb-2">👃</div>
+              <h4 class="font-bold text-slate-800 text-sm">Huella nasal única</h4>
+              <p class="text-xs text-slate-500 mt-1">Así como los humanos tenemos huellas dactilares, la nariz de cada gato tiene un patrón de crestas totalmente irrepetible.</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-amber-100 shadow-sm hover:shadow-md transition">
+              <div class="text-2xl mb-2">💤</div>
+              <h4 class="font-bold text-slate-800 text-sm">70% de su vida durmiendo</h4>
+              <p class="text-xs text-slate-500 mt-1">Pasan entre 13 y 16 horas diarias durmiendo para recargar su energía predatoria (y planear travesuras).</p>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-white border border-amber-100 shadow-sm hover:shadow-md transition">
+              <div class="text-2xl mb-2">🦴</div>
+              <h4 class="font-bold text-slate-800 text-sm">Sin clavículas rígidas</h4>
+              <p class="text-xs text-slate-500 mt-1">Sus clavículas son flotantes, lo que les permite colarse por cualquier abertura por la que quepa su cabeza.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Interactive Random Fact Generator Card -->
+        <div class="lg:col-span-5">
+          <div class="relative bg-gradient-to-tr from-slate-900 to-slate-800 text-white rounded-3xl p-7 sm:p-9 shadow-2xl overflow-hidden border border-slate-700">
+            <!-- Decorative badge -->
+            <div class="absolute -right-8 -top-8 w-32 h-32 bg-amber-500/20 rounded-full blur-2xl"></div>
+
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-2">
+                <span class="text-2xl">🔮</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Michi-Dato del Minuto</span>
+              </div>
+              <span id="fact-counter" class="text-xs text-slate-400 font-mono">Dato #1</span>
+            </div>
+
+            <div class="min-h-[140px] flex items-center">
+              <p id="fact-text" class="text-base sm:text-lg font-medium leading-relaxed text-slate-100 transition-opacity duration-300">
+                "Los gatos no tienen receptores para el sabor dulce. En cambio, son súper sensibles a los sabores ricos en aminoácidos como la carne y el pescado."
+              </p>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-700/80 flex items-center justify-between">
+              <button id="next-fact-btn" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs sm:text-sm transition-all active:scale-95 flex items-center gap-2">
+                <span>Dame otro dato</span>
+                <span>✨</span>
+              </button>
+
+              <button id="copy-fact-btn" class="text-xs text-slate-400 hover:text-white transition flex items-center gap-1.5" title="Copiar dato">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <span id="copy-feedback">Copiar</span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== GALERÍA DE MICHIS EN ADOPCIÓN ==================== -->
+  <section id="adopta" class="py-16 md:py-24 bg-white border-t border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <span class="text-amber-600 font-bold text-xs uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+            Adopta, no compres
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2">
+            Michis buscando un hogar 🏡
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-1">
+            Cada uno de estos pequeños tiene su cartilla de vacunación al día, esterilizado y listo para llenar tu casa de amor.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-white transition shadow-sm" data-filter="all">Todos (6)</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-amber-100 transition" data-filter="jugueton">Juguetones</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-amber-100 transition" data-filter="tranquilo">Tranquilos</button>
+          <button class="filter-btn px-4 py-2 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-amber-100 transition" data-filter="bebe">Cachorros</button>
+        </div>
+      </div>
+
+      <!-- Cat Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="cats-grid">
+        
+        <!-- Cat 1 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="jugueton">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=700&q=80" alt="Gato naranja simpático" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">1 año • Juguetón</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="42">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Simba Caramelito</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">42 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Adora perseguir pelotas de lana, trepar rascadores y pedir comida maullando como si fuera ópera italiana.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunado</span>
+                <span class="px-2 py-0.5 rounded-md bg-orange-100/70 text-orange-800 text-[11px] font-semibold">Esterilizado</span>
+                <span class="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-semibold">Sociable</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Simba Caramelito">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cat 2 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="tranquilo">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=700&q=80" alt="Gato atigrado elegante" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">3 años • Tranquilo</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="89">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Milo Señor Bigotes</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">89 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                El compañero ideal para personas que trabajan desde casa. Te acompañará sentado pacíficamente a tu lado en cada reunión.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunado</span>
+                <span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 text-[11px] font-semibold">Ideal Home Office</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Milo Señor Bigotes">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cat 3 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="bebe">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?auto=format&fit=crop&w=700&q=80" alt="Gatito blanco y esponjoso" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">4 meses • Cachorro</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="134">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Copito de Nube</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">134 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Es una bolita de pelusa suave con curiosidad infinita. Le fascina dormir sobre almohadas calientitas y dar besitos con la nariz.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunas al día</span>
+                <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-800 text-[11px] font-semibold">Súper cariñoso</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Copito de Nube">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cat 4 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="jugueton">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=700&q=80" alt="Gato con lentes y estilo" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">2 años • Juguetón</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="76">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Luna Rockera</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">76 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Tiene actitud de estrella de rock y agilidad olímpica. Le encantan los juguetes con plumas y observar pájaros desde la ventana.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunada</span>
+                <span class="px-2 py-0.5 rounded-md bg-orange-100/70 text-orange-800 text-[11px] font-semibold">Esterilizada</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Luna Rockera">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cat 5 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="tranquilo">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1513360309081-38f076278f1e?auto=format&fit=crop&w=700&q=80" alt="Gato negro místico con ojos dorados" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">4 años • Tranquilo</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="112">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Sombra Mística</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">112 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                ¡Los gatos negros son pura buena suerte y elegancia! Sombra es calmado, educado y le gusta dormir a los pies de la cama.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunado</span>
+                <span class="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 text-[11px] font-semibold">Súper dócil</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Sombra Mística">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cat 6 -->
+        <div class="cat-card group bg-[#FAF7F2] rounded-3xl overflow-hidden border border-amber-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col" data-category="bebe">
+          <div class="relative h-64 overflow-hidden bg-slate-200">
+            <img src="https://images.unsplash.com/photo-1561948955-570b270e7c36?auto=format&fit=crop&w=700&q=80" alt="Gatito siamés de ojos azules" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-md rounded-full text-xs font-bold text-amber-700 shadow-sm">3 meses • Cachorro</span>
+            <button class="like-cat-btn absolute top-4 right-4 w-10 h-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-slate-400 hover:text-red-500 hover:bg-white shadow-sm transition active:scale-90" data-likes="95">
+              <span class="heart-icon text-lg">🤍</span>
+            </button>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between">
+                <h3 class="font-display font-bold text-xl text-slate-900">Cleo Ojos de Zafiro</h3>
+                <span class="text-xs font-semibold text-slate-400 likes-count">95 amores</span>
+              </div>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Una pequeña princesa curiosa. Te contestará con tiernos maullidos cada vez que le hables por su nombre.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-4">
+                <span class="px-2 py-0.5 rounded-md bg-amber-100/70 text-amber-800 text-[11px] font-semibold">Vacunada</span>
+                <span class="px-2 py-0.5 rounded-md bg-sky-100 text-sky-800 text-[11px] font-semibold">Vocal y expresiva</span>
+              </div>
+            </div>
+            <button class="adopt-trigger-btn mt-6 w-full py-3 rounded-xl bg-slate-900 text-white font-bold text-xs hover:bg-amber-600 transition flex items-center justify-center gap-2" data-name="Cleo Ojos de Zafiro">
+              <span>Solicitar Adopción</span>
+              <span>🐾</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Guarantee banner -->
+      <div class="mt-12 p-6 rounded-2xl bg-amber-50 border border-amber-200/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-4 text-center sm:text-left">
+          <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl shrink-0">
+            📋
+          </div>
+          <div>
+            <h4 class="font-bold text-slate-900 text-sm">Proceso de Adopción Responsable</h4>
+            <p class="text-xs text-slate-600">Entrevistamos con cariño para asegurar la compatibilidad mutua y ofrecemos seguimiento veterinario inicial gratuito.</p>
+          </div>
+        </div>
+        <a href="#contacto" class="shrink-0 px-5 py-2.5 rounded-xl bg-white border border-amber-300 font-bold text-xs text-amber-800 hover:bg-amber-100 transition">
+          Conocer requisitos &rarr;
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE TOOL 2: MICHI-TRADUCTOR ==================== -->
+  <section id="traductor" class="py-16 md:py-24 bg-[#FAF7F2]">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-10">
+        <span class="text-amber-600 font-bold text-xs uppercase tracking-widest bg-amber-100 px-3 py-1 rounded-full">
+          Inteligencia Felina Artificial
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2">
+          Michi-Traductor Humano ➔ Gato 🗣️🐾
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">
+          Escribe cualquier frase en español y descifra cómo la diría tu gato en su refinado dialecto de maullidos y ronroneos.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 sm:p-8 border border-amber-200/90 shadow-xl space-y-6">
+        
+        <div>
+          <label for="human-input" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+            Tu mensaje para el michi:
+          </label>
+          <div class="relative">
+            <textarea 
+              id="human-input" 
+              rows="3" 
+              class="w-full p-4 rounded-2xl bg-slate-50 border border-slate-200 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 focus:bg-white transition"
+              placeholder="Ej: Te quiero mucho michi, ven a cenar tu lata de atún..."
+            ></textarea>
+            <button id="clear-input-btn" class="absolute right-3 top-3 text-slate-400 hover:text-slate-600 text-xs px-2 py-1 rounded">Limpiar</button>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <button id="translate-btn" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold text-sm shadow-md transition active:scale-95 flex items-center gap-2">
+            <span>Traducir al idioma Michi</span>
+            <span class="animate-wiggle">✨</span>
+          </button>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between mb-2">
+            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+              Respuesta en Michi-Dialecto:
+            </label>
+            <span id="cat-mood-badge" class="text-xs px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold">Estado de ánimo: Hambre constante</span>
+          </div>
+          
+          <div class="p-5 rounded-2xl bg-amber-50/60 border border-amber-200 min-h-[90px] flex items-center justify-between gap-4">
+            <p id="cat-output" class="font-display font-medium text-amber-900 text-lg italic">
+              "Miau miau prrrrr? Miau miaaau! (Traducción: Abre la lata de atún de inmediato, humano sirviente)"
+            </p>
+            <button id="speak-cat-btn" class="shrink-0 p-3 rounded-xl bg-white border border-amber-300 hover:bg-amber-100 text-amber-700 transition active:scale-90" title="Escuchar maullido">
+              🔊
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2 pt-2 text-xs text-slate-500">
+          <span class="font-semibold text-slate-700">Frases rápidas:</span>
+          <button class="quick-phrase px-3 py-1 rounded-lg bg-slate-100 hover:bg-amber-100 hover:text-amber-900 transition">"¿Quién es un gatito lindo?"</button>
+          <button class="quick-phrase px-3 py-1 rounded-lg bg-slate-100 hover:bg-amber-100 hover:text-amber-900 transition">"Bájate de la mesa"</button>
+          <button class="quick-phrase px-3 py-1 rounded-lg bg-slate-100 hover:bg-amber-100 hover:text-amber-900 transition">"Hora de dormir"</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== TESTIMONIOS ==================== -->
+  <section class="py-16 md:py-24 bg-white border-t border-amber-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-amber-600 font-bold text-xs uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+          Historias que llenan el corazón
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 mt-2">
+          Lo que dicen los Cat-Parents 💬
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-1">
+          Miles de personas ya transformaron sus hogares con un compañero peludo de MichiLandia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Review 1 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-amber-100 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex text-amber-400 text-lg mb-4">★★★★★</div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "Adopté a Garfield hace 6 meses. Al principio era tímido, pero hoy es el dueño de mi sofá y mi corazón. El proceso de adopción fue transparente y lleno de cariño."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-amber-200/50">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Valeria" class="w-11 h-11 rounded-full object-cover">
+            <div>
+              <h5 class="font-bold text-slate-900 text-xs sm:text-sm">Valeria Mendoza</h5>
+              <p class="text-[11px] text-slate-500">Mamá humana de Garfield</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-amber-100 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex text-amber-400 text-lg mb-4">★★★★★</div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "El generador de ronroneos es mi secreto para concentrarme mientras programo. Me pongo los audífonos y siento como si tuviera a mi gato roncando sobre el teclado."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-amber-200/50">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Carlos" class="w-11 h-11 rounded-full object-cover">
+            <div>
+              <h5 class="font-bold text-slate-900 text-xs sm:text-sm">Carlos E. Soto</h5>
+              <p class="text-[11px] text-slate-500">Software Engineer & Cat Lover</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-amber-100 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition duration-300">
+          <div>
+            <div class="flex text-amber-400 text-lg mb-4">★★★★★</div>
+            <p class="text-slate-700 text-sm leading-relaxed italic">
+              "La guía de cuidados y los tips veterinarios me ayudaron a entender por fin por qué mi gata botaba las cosas de la mesa (¡era aburrimiento!). Son los mejores."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 mt-6 pt-4 border-t border-amber-200/50">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Mariana" class="w-11 h-11 rounded-full object-cover">
+            <div>
+              <h5 class="font-bold text-slate-900 text-xs sm:text-sm">Mariana Rivas</h5>
+              <p class="text-[11px] text-slate-500">Diseñadora & Humana de Mochi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== NEWSLETTER & COMUNIDAD ==================== -->
+  <section id="comunidad" class="py-16 md:py-24 bg-gradient-to-br from-amber-500 via-orange-500 to-amber-600 text-white relative overflow-hidden">
+    <!-- Background paw decoration -->
+    <div class="absolute -right-10 -bottom-10 text-white/10 text-9xl pointer-events-none select-none">🐾</div>
+    <div class="absolute -left-10 -top-10 text-white/10 text-9xl pointer-events-none select-none">🐱</div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-xs font-bold tracking-wider uppercase mb-4">
+        Club de Suscriptores Bigotudos
+      </span>
+
+      <h2 class="font-display font-black text-3xl sm:text-5xl tracking-tight leading-tight">
+        Recibe una dosis diaria de ternura y consejos felinos 💌
+      </h2>
+
+      <p class="text-amber-100 text-sm sm:text-base mt-4 max-w-xl mx-auto">
+        Únete a más de 50,000 suscriptores. Cero spam, solo fotos tiernas de gatos, recordatorios de desparasitación y promociones en arenas y rascadores.
+      </p>
+
+      <!-- Form -->
+      <form id="newsletter-form" class="mt-8 max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+        <input 
+          type="email" 
+          id="newsletter-email" 
+          required 
+          placeholder="Escribe tu correo electrónico..." 
+          class="flex-1 px-5 py-4 rounded-2xl bg-white text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:ring-4 focus:ring-white/40 shadow-lg"
+        >
+        <button 
+          type="submit" 
+          class="px-8 py-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm shadow-xl transition active:scale-95 shrink-0"
+        >
+          ¡Unirme ya!
+        </button>
+      </form>
+
+      <p class="text-xs text-amber-200 mt-3">Prometemos cuidar tus datos tanto como un gato cuida su caja favorita.</p>
+
+      <div id="newsletter-toast" class="hidden mt-6 p-4 rounded-2xl bg-white text-slate-800 font-bold text-sm max-w-md mx-auto shadow-2xl flex items-center justify-center gap-2 animate-bounce">
+        <span>🎉</span>
+        <span>¡Bienvenido a la familia MichiLandia! Revisa tu bandeja.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-slate-950 text-slate-400 py-16 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+        
+        <!-- Brand -->
+        <div class="md:col-span-1 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🐾</span>
+            <span class="font-display font-bold text-xl text-white">MichiLandia</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            El rincón favorito de internet para honrar a nuestros compañeros de cuatro patas, bigotes finos y corazones gigantes.
+          </p>
+          <div class="flex items-center gap-3 text-lg text-slate-300">
+            <a href="#" class="hover:text-amber-400 transition" title="Instagram">📸</a>
+            <a href="#" class="hover:text-amber-400 transition" title="TikTok">🎵</a>
+            <a href="#" class="hover:text-amber-400 transition" title="Twitter/X">🐦</a>
+            <a href="#" class="hover:text-amber-400 transition" title="YouTube">📺</a>
+          </div>
+        </div>
+
+        <!-- Links 1 -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Navegación</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#curiosidades" class="hover:text-amber-400 transition">Curiosidades</a></li>
+            <li><a href="#ronroneos" class="hover:text-amber-400 transition">Ronron-Terapia</a></li>
+            <li><a href="#adopta" class="hover:text-amber-400 transition">Michis en Adopción</a></li>
+            <li><a href="#traductor" class="hover:text-amber-400 transition">Michi-Traductor</a></li>
+          </ul>
+        </div>
+
+        <!-- Links 2 -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Adopción Responsable</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#" class="hover:text-amber-400 transition">Requisitos de adopción</a></li>
+            <li><a href="#" class="hover:text-amber-400 transition">Guía de adaptación en casa</a></li>
+            <li><a href="#" class="hover:text-amber-400 transition">Alimentación recomendada</a></li>
+            <li><a href="#" class="hover:text-amber-400 transition">Refugios aliados</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Legal -->
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Contacto & Amor</h4>
+          <p class="text-xs text-slate-400">¿Tienes dudas o quieres colaborar como hogar temporal?</p>
+          <p class="text-xs text-amber-400 font-semibold mt-2">contacto@michilandia.pet</p>
+          <p class="text-[11px] text-slate-500 mt-4">
+            © 2026 MichiLandia. Hecho con ❤️, café y muchos ronroneos.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>Ningún ratón real fue dañado durante la creación de este sitio web.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:underline">Políticas de Privacidad</a>
+          <a href="#" class="hover:underline">Términos de Convivencia Felina</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL DE ADOPCIÓN ==================== -->
+  <div id="adoption-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-amber-200 animate-scale-up">
+      <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-xl font-bold w-8 h-8 rounded-full flex items-center justify-center bg-slate-100">&times;</button>
+      
+      <div class="text-center">
+        <div class="w-16 h-16 mx-auto rounded-full bg-amber-100 flex items-center justify-center text-3xl mb-3">
+          🐱
+        </div>
+        <h3 class="font-display font-bold text-2xl text-slate-900">¡Gran decisión de amor!</h3>
+        <p class="text-xs text-slate-500 mt-1">Estás a un paso de postularte para adoptar a <strong id="modal-cat-name" class="text-amber-600">este michi</strong>.</p>
+      </div>
+
+      <form id="adoption-form" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Tu nombre completo</label>
+          <input type="text" required placeholder="Ej. Ana García" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Teléfono o WhatsApp</label>
+          <input type="tel" required placeholder="+34 600 000 000" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">¿Tienes experiencia previa con gatos?</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 bg-white">
+            <option>Sí, actualmente tengo otros michis</option>
+            <option>Tuve antes pero ya no</option>
+            <option>Será mi primer michi (¡aprenderé todo!)</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-sm shadow-md hover:from-amber-600 hover:to-orange-600 transition">
+          Enviar Solicitud de Adopción
+        </button>
+      </form>
+      
+      <div id="modal-success" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-bold text-center">
+        ✅ ¡Solicitud enviada con éxito! Nuestro equipo del refugio te contactará en menos de 24 horas.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    /* ========================================================
+       1. SYNTHESIZED WEB AUDIO API (PURR & MEOW)
+       Works 100% offline without external mp3 files!
+       ======================================================== */
+    let audioCtx = null;
+    let isPurring = false;
+    let purrNodes = null;
+
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+      }
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // Realistic cat purr synthesizer:
+    // Uses Brown/Pink noise buffer filtered through low-pass resonant filter modulated by an LFO (20-30Hz vibration)
+    function startPurr() {
+      const ctx = getAudioContext();
+      if (isPurring) return;
+
+      const bufferSize = ctx.sampleRate * 2;
+      const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+      const output = noiseBuffer.getChannelData(0);
+      let lastOut = 0.0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        output[i] = (lastOut + (0.02 * white)) / 1.02; // Brown noise approximation
+        lastOut = output[i];
+        output[i] *= 3.5;
+      }
+
+      const noiseNode = ctx.createBufferSource();
+      noiseNode.buffer = noiseBuffer;
+      noiseNode.loop = true;
+
+      // Filter
+      const filter = ctx.createBiquadFilter();
+      filter.type = 'lowpass';
+      
+      const toneSelect = document.getElementById('purr-tone').value;
+      if (toneSelect === 'kitten') {
+        filter.frequency.setValueAtTime(140, ctx.currentTime);
+      } else if (toneSelect === 'intense') {
+        filter.frequency.setValueAtTime(70, ctx.currentTime);
+      } else {
+        filter.frequency.setValueAtTime(95, ctx.currentTime);
+      }
+      filter.Q.setValueAtTime(6.0, ctx.currentTime);
+
+      // LFO for the rhythmic purr vibration (approx 24 Hz, typical cat purring pulse)
+      const lfo = ctx.createOscillator();
+      lfo.frequency.setValueAtTime(toneSelect === 'kitten' ? 28 : 22, ctx.currentTime);
+
+      const lfoGain = ctx.createGain();
+      lfoGain.gain.setValueAtTime(0.7, ctx.currentTime);
+
+      const amplitudeGain = ctx.createGain();
+      const currentVol = parseFloat(document.getElementById('purr-volume').value) || 0.7;
+      amplitudeGain.gain.setValueAtTime(currentVol, ctx.currentTime);
+
+      // Connect LFO to modulate noise volume
+      lfo.connect(amplitudeGain.gain);
+      noiseNode.connect(filter);
+      filter.connect(amplitudeGain);
+      amplitudeGain.connect(ctx.destination);
+
+      noiseNode.start();
+      lfo.start();
+
+      purrNodes = { noiseNode, lfo, filter, amplitudeGain };
+      isPurring = true;
+      updatePurrUI(true);
+    }
+
+    function stopPurr() {
+      if (!isPurring || !purrNodes) return;
+      try {
+        purrNodes.noiseNode.stop();
+        purrNodes.lfo.stop();
+        purrNodes.noiseNode.disconnect();
+        purrNodes.lfo.disconnect();
+      } catch (e) {
+        console.warn(e);
+      }
+      purrNodes = null;
+      isPurring = false;
+      updatePurrUI(false);
+    }
+
+    function togglePurr() {
+      if (isPurring) {
+        stopPurr();
+      } else {
+        startPurr();
+      }
+    }
+
+    function updatePurrUI(active) {
+      const label = document.getElementById('main-purr-btn-text');
+      const icon = document.getElementById('main-purr-icon');
+      const quickIcon = document.getElementById('quick-purr-icon');
+      const quickLabel = document.getElementById('quick-purr-label');
+      const heroBtnLabel = document.getElementById('hero-sound-label');
+      const statusText = document.getElementById('purr-status');
+      const bars = document.getElementById('purr-bars');
+      const avatar = document.getElementById('purr-avatar');
+
+      if (active) {
+        label.textContent = "Detener Ronroneo";
+        icon.textContent = "⏹️";
+        quickIcon.textContent = "🔊";
+        quickLabel.textContent = "Ronroneo: ON";
+        if (heroBtnLabel) heroBtnLabel.textContent = "Detener Ronroneo";
+        statusText.textContent = "¡Ronroneando activamente! Siente la frecuencia relajante...";
+        bars.classList.remove('opacity-30');
+        bars.classList.add('opacity-100', 'animate-pulse');
+        avatar.classList.add('scale-110', 'rotate-3');
+      } else {
+        label.textContent = "Iniciar Ronroneo";
+        icon.textContent = "▶️";
+        quickIcon.textContent = "🔈";
+        quickLabel.textContent = "Ronroneo: OFF";
+        if (heroBtnLabel) heroBtnLabel.textContent = "Probar Ronron-Terapia";
+        statusText.textContent = "Presiona reproducir para iniciar la vibración";
+        bars.classList.add('opacity-30');
+        bars.classList.remove('opacity-100', 'animate-pulse');
+        avatar.classList.remove('scale-110', 'rotate-3');
+      }
+    }
+
+    // Synthesized cute Meow
+    function playSynthesizedMeow() {
+      const ctx = getAudioContext();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'triangle';
+      
+      const now = ctx.currentTime;
+      // Frequency pitch curve: Start mid -> peak high -> slide down (classic "mee-ooww")
+      osc.frequency.setValueAtTime(450, now);
+      osc.frequency.exponentialRampToValueAtTime(750, now + 0.15);
+      osc.frequency.exponentialRampToValueAtTime(320, now + 0.55);
+
+      gain.gain.setValueAtTime(0.01, now);
+      gain.gain.linearRampToValueAtTime(0.35, now + 0.1);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.55);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start(now);
+      osc.stop(now + 0.56);
+    }
+
+    /* ========================================================
+       2. EVENT LISTENERS FOR SOUNDS
+       ======================================================== */
+    document.getElementById('toggle-purr-btn').addEventListener('click', togglePurr);
+    document.getElementById('btn-quick-purr').addEventListener('click', togglePurr);
+    document.getElementById('hero-sound-btn').addEventListener('click', togglePurr);
+    document.getElementById('mobile-purr-btn').addEventListener('click', togglePurr);
+    document.getElementById('meow-btn').addEventListener('click', playSynthesizedMeow);
+    document.getElementById('speak-cat-btn').addEventListener('click', playSynthesizedMeow);
+
+    document.getElementById('purr-volume').addEventListener('input', (e) => {
+      if (purrNodes && purrNodes.amplitudeGain) {
+        purrNodes.amplitudeGain.gain.setValueAtTime(parseFloat(e.target.value), audioCtx.currentTime);
+      }
+    });
+
+    document.getElementById('purr-tone').addEventListener('change', () => {
+      if (isPurring) {
+        stopPurr();
+        startPurr();
+      }
+    });
+
+    /* ========================================================
+       3. CAT FACTS DATABASE & GENERATOR
+       ======================================================== */
+    const catFacts = [
+      "Los gatos no pueden detectar el sabor dulce debido a una mutación genética en sus papilas gustativas.",
+      "El cerebro de un gato es biológicamente más parecido al cerebro humano que al de un perro; ambos tenemos regiones idénticas dedicadas a las emociones.",
+      "Un gato puede saltar hasta seis veces la longitud de su propio cuerpo en un solo movimiento.",
+      "Tienen más de 20 vocalizaciones diferentes, pero el maullido adulto fue desarrollado casi exclusivamente para comunicarse con humanos.",
+      "El ronroneo no solo expresa felicidad; también funciona como un mecanismo de auto-curación para regenerar tejidos óseos y calmar el dolor.",
+      "Los gatos pasan entre un tercio y la mitad de su tiempo despiertos acicalándose para regular su temperatura y eliminar olores.",
+      "Tienen un tercer párpado llamado 'membrana nictitante' que protege sus ojos y los mantiene lubricados.",
+      "Pueden correr a velocidades de hasta 48 km/h en ráfagas cortas, ¡más rápido que Usain Bolt!",
+      "Los bigotes de un gato (vibrisas) miden el ancho exacto de su cuerpo para saber al instante si cabrán en un hueco sin atascarse.",
+      "Isaac Newton inventó la puerta gatera (cat flap) para que sus gatos no interrumpieran sus experimentos de luz en una habitación oscura."
+    ];
+
+    let currentFactIdx = 0;
+    const factTextEl = document.getElementById('fact-text');
+    const factCounterEl = document.getElementById('fact-counter');
+    const nextFactBtn = document.getElementById('next-fact-btn');
+    const copyFactBtn = document.getElementById('copy-fact-btn');
+    const copyFeedback = document.getElementById('copy-feedback');
+
+    nextFactBtn.addEventListener('click', () => {
+      currentFactIdx = (currentFactIdx + 1) % catFacts.length;
+      factTextEl.style.opacity = 0;
+      setTimeout(() => {
+        factTextEl.textContent = `"${catFacts[currentFactIdx]}"`;
+        factCounterEl.textContent = `Dato #${currentFactIdx + 1}`;
+        factTextEl.style.opacity = 1;
+      }, 200);
+    });
+
+    copyFactBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(catFacts[currentFactIdx]).then(() => {
+        copyFeedback.textContent = "¡Copiado!";
+        setTimeout(() => { copyFeedback.textContent = "Copiar"; }, 2000);
+      });
+    });
+
+    /* ========================================================
+       4. INTERACTIVE CAT TRANSLATOR
+       ======================================================== */
+    const humanInput = document.getElementById('human-input');
+    const catOutput = document.getElementById('cat-output');
+    const translateBtn = document.getElementById('translate-btn');
+    const clearInputBtn = document.getElementById('clear-input-btn');
+    const catMoodBadge = document.getElementById('cat-mood-badge');
+
+    const catPhrases = [
+      { text: "Miau... prrr-prrr mrreow! (Traducción: Ya te escuché, pero primero dame atún de lata)", mood: "Exigente pero tierno" },
+      { text: "Mraaooowww hiss? Purrrrrr. (Traducción: Deja esa caja de cartón en el suelo, ahora es mi castillo)", mood: "Conquistador de cartón" },
+      { text: "Prrrrr-meow! Miau miau! (Traducción: Te concedo permiso para acariciarme la barbilla... solo 3 veces)", mood: "Realeza felina" },
+      { text: "Miau? ... *ignora con elegancia y se lava la patita* (Traducción: Tu solicitud está siendo procesada)", mood: "Desinterés zen" },
+      { text: "¡MRAAAAAAUUU! (Traducción: Son las 3:00 AM y es el momento exacto para correr por el pasillo)", mood: "Zoomies activados" },
+      { text: "Purrrrrrrrrrrr... *amasando mantita* (Traducción: Eres mi humano favorito en el universo)", mood: "Puro amor y ternura" }
+    ];
+
+    function translateToCat() {
+      const text = humanInput.value.trim();
+      if (!text) {
+        catOutput.textContent = '"Miau? (Humano, no has escrito nada...)"';
+        return;
+      }
+      playSynthesizedMeow();
+      const randomTranslation = catPhrases[Math.floor(Math.random() * catPhrases.length)];
+      catOutput.style.opacity = 0;
+      setTimeout(() => {
+        catOutput.textContent = `"${randomTranslation.text}"`;
+        catMoodBadge.textContent = `Estado de ánimo: ${randomTranslation.mood}`;
+        catOutput.style.opacity = 1;
+      }, 150);
+    }
+
+    translateBtn.addEventListener('click', translateToCat);
+    clearInputBtn.addEventListener('click', () => {
+      humanInput.value = '';
+      humanInput.focus();
+    });
+
+    document.querySelectorAll('.quick-phrase').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        humanInput.value = e.target.textContent.replace(/"/g, '');
+        translateToCat();
+      });
+    });
+
+    /* ========================================================
+       5. CATS FILTER & LIKES INTERACTIVITY
+       ======================================================== */
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const catCards = document.querySelectorAll('.cat-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => {
+          b.classList.remove('active', 'bg-amber-500', 'text-white');
+          b.classList.add('bg-slate-100', 'text-slate-600');
+        });
+        btn.classList.add('active', 'bg-amber-500', 'text-white');
+        btn.classList.remove('bg-slate-100', 'text-slate-600');
+
+        const filter = btn.getAttribute('data-filter');
+        catCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Like buttons with heart animation
+    document.querySelectorAll('.like-cat-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const heart = btn.querySelector('.heart-icon');
+        const countSpan = btn.closest('.cat-card').querySelector('.likes-count');
+        let currentLikes = parseInt(btn.getAttribute('data-likes'));
+
+        if (!btn.classList.contains('liked')) {
+          btn.classList.add('liked');
+          heart.textContent = '❤️';
+          heart.classList.add('heart-active');
+          currentLikes++;
+          btn.setAttribute('data-likes', currentLikes);
+          countSpan.textContent = `${currentLikes} amores`;
+          playSynthesizedMeow();
+        } else {
+          btn.classList.remove('liked');
+          heart.textContent = '🤍';
+          heart.classList.remove('heart-active');
+          currentLikes--;
+          btn.setAttribute('data-likes', currentLikes);
+          countSpan.textContent = `${currentLikes} amores`;
+        }
+      });
+    });
+
+    // Hero like button
+    const heroLike = document.getElementById('hero-like-btn');
+    heroLike.addEventListener('click', () => {
+      playSynthesizedMeow();
+      heroLike.classList.toggle('bg-red-500');
+      heroLike.classList.toggle('text-white');
+      heroLike.classList.add('scale-125');
+      setTimeout(() => heroLike.classList.remove('scale-125'), 200);
+    });
+
+    /* ========================================================
+       6. ADOPTION MODAL
+       ======================================================== */
+    const modal = document.getElementById('adoption-modal');
+    const modalCatName = document.getElementById('modal-cat-name');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const adoptionForm = document.getElementById('adoption-form');
+    const modalSuccess = document.getElementById('modal-success');
+
+    document.querySelectorAll('.adopt-trigger-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const catName = btn.getAttribute('data-name');
+        modalCatName.textContent = catName;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        modalSuccess.classList.add('hidden');
+        adoptionForm.reset();
+      });
+    });
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    closeModalBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    adoptionForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      modalSuccess.classList.remove('hidden');
+      playSynthesizedMeow();
+      setTimeout(() => {
+        closeModal();
+      }, 2500);
+    });
+
+    /* ========================================================
+       7. NEWSLETTER TOAST
+       ======================================================== */
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterToast = document.getElementById('newsletter-toast');
+
+    newsletterForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      newsletterToast.classList.remove('hidden');
+      newsletterForm.reset();
+      playSynthesizedMeow();
+      setTimeout(() => {
+        newsletterToast.classList.add('hidden');
+      }, 5000);
+    });
+
+    /* ========================================================
+       8. MOBILE MENU TOGGLE
+       ======================================================== */
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
